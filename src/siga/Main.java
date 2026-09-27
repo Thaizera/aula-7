@@ -1,13 +1,5 @@
 package siga;
 
-/**
- * Ponto de entrada do SIGA (código INICIAL da atividade da Aula 7).
- *
- * O programa FUNCIONA: matricula alunos e gera o relatório. Mas repare na
- * saída: o ServicoMatricula está emitindo comandos SQL, ou seja, a regra de
- * negócio conhece a tecnologia de persistência. Sua tarefa é extrair essa
- * responsabilidade para um DAO.
- */
 public class Main {
 
     public static void main(String[] args) {
@@ -16,12 +8,11 @@ public class Main {
         ServicoMatricula servico = new ServicoMatricula();
 
         servico.matricular(new Aluno("Maria Silva", "2026001", 8.5));
-        servico.matricular(new Aluno("João Souza",  "2026002", 6.0));
+        servico.matricular(new Aluno("João Souza", "2026002", 6.0));
         System.out.println();
 
         servico.gerarRelatorio();
 
-        // A regra de negócio funciona: média inválida é rejeitada.
         System.out.println();
         try {
             servico.matricular(new Aluno("Teste Inválido", "2026003", -1));
