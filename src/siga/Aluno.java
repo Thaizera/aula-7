@@ -1,13 +1,5 @@
 package siga;
 
-/**
- * Sistema de Gestão Acadêmica Simplificado (SIGA)
- * Técnicas de Programação II - Fatec de Porto Ferreira
- * Atividade prática da Aula 7 (Persistência e padrão DAO).
- *
- * Entidade de domínio. Está adequada e NÃO é alvo da refatoração:
- * serve de base para as operações de persistência.
- */
 public class Aluno {
 
     private final String nome;
